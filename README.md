@@ -1,16 +1,921 @@
-### Hi there 👋
+<!--Hunter Leary 12/27/2020 Peake Honors Program Individual Research Project Fall 2020
+	Special Thanks to Dr. Adrian and Dr. Carter of UVA- Wise for support and guidance-->
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>Peake Honors Program</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+		<!--This next line is how I imported the icons for the navigation bar-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- The next approximately 600 lines are CSS styling -->
+		<style>
+		body {
+			font-family: "Gotham SSm A","Gotham SSm B",Helvetica,sans-serif;
+			font-size: 14pt;
+			background-color: #fff;
+			color: #131a2d;
+		}
+		h1 {
+			font-size: 30pt;
+			color: #d21414;
+			text-align: center;
+			text-shadow: 3px 3px 3px #ccc;
+			height: 100px;
+			margin: auto;
+		}
+		h2 {
+			font-size: 20pt;
+			color: #232d4b;
+			text-align: center;
+			text-shadow: 3px 3px 3px #ccc;
+			height: 50px;
+			margin: auto;
+		}
+		h3 {
+			text-align: left;
+			font-size: 24pt;
+		}
+		h4{
+				font-weight: normal;
+		}
+		p,li {
+			text-align: left;
+			color: #d21414;
+			font-size: 18pt;
+		}
+		hr {
+			height: 5px;
+			width: 100%;
+			background-color: #d21414;
+			margin: auto;
+			border: none;
+			display: block;
+			overflow: hidden;
+			top: 0;
+			Left: 0;
+			right: 0;
+			position: fixed;
+		}
+		a{
+			color:#d21414;
+		}
+		table{
+			font-size: 18pt;
+			color: #d21414;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		th{
+			text-align: left;
+		}
+		.tab {
+			text-align: center;
+			width: 100%;
+		  overflow: hidden;
+		  border: 1px solid #ccc;
+		  background-color: #232d4b;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		/* Style the buttons inside the tab */
+		.tab button {
+		  background-color: inherit;
+		  border: none;
+		  outline: none;
+		  cursor: pointer;
+			padding: 14px 16px;
+		  transition: 0.3s;
+		  font-size: 32px;
+			color: #fff;
+		}
 
-<!--
-**peakehonors/peakehonors** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+		/* Change background color of buttons on hover */
+		.tab button:hover {
+		  background-color: #131a2d;
+		}
 
-Here are some ideas to get you started:
+		/* Create an active/current tablink class */
+		.tab button.active {
+		  background-color: #131a2d;
+		}
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+		/* Style the tab content */
+		.tabcontent {
+		  display: none;
+		  padding: 6px 12px;
+		  border: none;
+			height: 100%;
+		}
+		footer {
+			background-color: #232d4b;
+			width: 100%;
+			text-align: center;
+			color: #fff;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 60px;
+		}
+		/*picture format*/
+		.logo{
+			height: auto;
+			width: 200px;
+			display: block;
+			margin: 5px;
+		}
+		.slide{
+			height: 30%;
+			width: 30%;
+			display: block;
+			border: 3px solid #232d4b;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.single{
+			height: 40%;
+			display: block;
+			border: 3px solid #232d4b;
+			margin-left: auto;
+			margin-right: auto;
+			width: 40%;
+		}
+		@media only screen and (max-width: 2600px) {
+			h1{
+				font-size: 60pt;
+				height: 200px;
+			}
+			h2{
+				font-size: 30pt;
+				height: 25px;
+			}
+			h3{
+				font-size: 30pt;
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+			p,li  {
+				font-size: 28pt;
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+			table {
+				font-size: 28pt;
+			}
+			body{
+				font-size: 28pt;
+			}
+			footer{
+					height: 80px;
+			}
+			.tab button{
+				background-color: inherit;
+				border: none;
+				outline: none;
+				cursor: pointer;
+				padding: 10px 10px;
+				transition: 0.3s;
+				font-size: 50px;
+				color: #fff;
+			}
+			.logo{
+				height: auto;
+				width: 300px;
+				margin: 10px;
+			}
+			.slide{
+				height: 50%;
+				width: 50%;
+			}
+			.single{
+				height: 50%;
+				width: 50%;
+			}
+		}
+		@media only screen and (max-width: 2240px) {
+			h1{
+				font-size: 60pt;
+				height: 200px;
+			}
+			h2{
+				font-size: 30pt;
+				height: 25px;
+			}
+			h3{
+				font-size: 30pt;
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+			p,li {
+				font-size: 28pt;
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+			table {
+				font-size: 28pt;
+			}
+			body{
+				font-size: 28pt;
+			}
+			footer{
+					height: 80px;
+			}
+			.tab button{
+				background-color: inherit;
+				border: none;
+				outline: none;
+				cursor: pointer;
+				padding: 10px 10px;
+				transition: 0.3s;
+				font-size: 44px;
+				color: #fff;
+			}
+			.logo{
+				height: auto;
+				width: 300px;
+				margin: 10px;
+			}
+			.slide{
+				height: 50%;
+				width: 50%;
+			}
+			.single{
+				height: 50%;
+				width: 50%;
+			}
+		}
+		@media only screen and (max-width: 2000px) {
+			h1{
+				font-size: 32pt;
+				height: 70px;
+			}
+			h2{
+				font-size: 24pt;
+				height: 25px;
+			}
+			h3{
+				font-size: 20pt;
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+			p,li {
+				font-size: 18pt;
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+			table {
+				font-size: 18pt;
+			}
+			body{
+				font-size: 18pt;
+			}
+			footer{
+					height: 60px;
+			}
+			.tab button{
+				background-color: inherit;
+				border: none;
+				outline: none;
+				cursor: pointer;
+				padding: 10px 10px;
+				transition: 0.3s;
+				font-size: 30px;
+				color: #fff;
+			}
+			.logo{
+				height: auto;
+				width: 250px;
+				margin: 10px;
+			}
+			.slide{
+				height: 40%;
+				width: 40%;
+			}
+			.single{
+				height: 50%;
+				width: 50%;
+			}
+		}
+		@media only screen and (max-width: 1600px) {
+			h1{
+				font-size: 32pt;
+				height: 50px;
+			}
+			h2{
+				font-size: 24pt;
+				height: 25px;
+			}
+			h3{
+				font-size: 20pt;
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+			p,li {
+				font-size: 18pt;
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+			table {
+				font-size: 18pt;
+			}
+			body{
+				font-size: 18pt;
+			}
+			footer{
+					height: 60px;
+			}
+			.tab button{
+				background-color: inherit;
+				border: none;
+				outline: none;
+				cursor: pointer;
+				padding: 10px 10px;
+				transition: 0.3s;
+				font-size: 22px;
+				color: #fff;
+			}
+			.logo{
+				height: auto;
+				width: 200px;
+				margin: 10px;
+			}
+			.slide{
+				height: 60%;
+				width: 60%;
+			}
+			.single{
+				height: 70%;
+				width: 70%;
+			}
+		}
+		@media only screen and (max-width: 1400px) {
+			h1{
+				font-size: 32pt;
+				height: 50px;
+			}
+			h2{
+				font-size: 24pt;
+				height: 25px;
+			}
+			h3{
+				font-size: 20pt;
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+			p,li {
+				font-size: 18pt;
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+			table {
+				font-size: 18pt;
+			}
+			body{
+				font-size: 18pt;
+			}
+			footer{
+					height: 60px;
+			}
+			.tab button{
+				background-color: inherit;
+				border: none;
+				outline: none;
+				cursor: pointer;
+				padding: 10px 10px;
+				transition: 0.3s;
+				font-size: 22px;
+				color: #fff;
+			}
+			.logo{
+				height: auto;
+				width: 200px;
+				margin: 10px;
+			}
+			.slide{
+				height: 60%;
+				width: 60%;
+			}
+			.single{
+				height: 70%;
+				width: 70%;
+			}
+		}
+		@media only screen and (max-width: 1100px) {
+			h1{
+				font-size: 24pt;
+				height: 50px;
+			}
+			h2{
+				font-size: 18pt;
+				height: 25px;
+			}
+			h3{
+				font-size: 20pt;
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+			p,li {
+				font-size: 18pt;
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+			table {
+				font-size: 18pt;
+			}
+			body{
+				font-size: 14pt;
+			}
+			footer{
+					height: 60px;
+			}
+			.tab button{
+				background-color: inherit;
+				border: none;
+				outline: none;
+				cursor: pointer;
+				padding: 10px 10px;
+				transition: 0.3s;
+				font-size: 18px;
+				color: #fff;
+			}
+			.logo{
+				height: auto;
+				width: 200px;
+				margin: 10px;
+			}
+			.slide{
+				height: 60%;
+				width: 60%;
+			}
+			.single{
+				height: 70%;
+				width: 70%;
+			}
+		}
+		@media only screen and (max-width: 800px) {
+			h1{
+				font-size: 22pt;
+				height: 50px;
+			}
+			h2{
+				font-size: 16pt;
+				height: 25px;
+			}
+			h3{
+				font-size: 16pt;
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+			p,li {
+				font-size: 14pt;
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+			table {
+				font-size: 14pt;
+			}
+			body{
+				font-size: 12pt;
+			}
+			footer{
+					height: 50px;
+			}
+			.tab button{
+				background-color: inherit;
+				border: none;
+				outline: none;
+				cursor: pointer;
+				padding: 10px 10px;
+				transition: 0.3s;
+				font-size: 14px;
+				color: #fff;
+			}
+			.logo{
+				height: auto;
+				width: 150px;
+				margin: 10px;
+			}
+			.slide{
+				height: 60%;
+				width: 60%;
+			}
+			.single{
+				height: 70%;
+				width: 70%;
+			}
+		}
+		@media only screen and (max-width: 600px) {
+			h1{
+				font-size: 15pt;
+				height: 50px;
+			}
+			h2{
+				font-size: 12pt;
+				height: 25px;
+			}
+			h3{
+				font-size: 14pt;
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+			p,li {
+				font-size: 12pt;
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+			table {
+				font-size: 12pt;
+			}
+			body{
+				font-size: 10pt;
+			}
+			footer{
+					height: 50px;
+			}
+			.tab button{
+				background-color: inherit;
+				border: none;
+				outline: none;
+				cursor: pointer;
+				padding: 5px 5px;
+				transition: 0.3s;
+				font-size: 14px;
+				color: #fff;
+			}
+			.logo{
+				height: auto;
+				width: 100px;
+				margin: 10px;
+			}
+			.slide{
+				height: 60%;
+				width: 60%;
+			}
+			.single{
+				height: 70%;
+				width: 70%;
+			}
+		}
+		@media only screen and (max-width: 400px) {
+			h1{
+				font-size: 15pt;
+				height: 50px;
+			}
+			h2{
+				font-size: 12pt;
+				height: 25px;
+			}
+			h3{
+				font-size: 14pt;
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+			p,li {
+				font-size: 12pt;
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+			table {
+				font-size: 12pt;
+			}
+			body{
+				font-size: 9pt;
+			}
+			footer{
+					height: 50px;
+			}
+			.tab button{
+				background-color: inherit;
+				border: none;
+				outline: none;
+				cursor: pointer;
+				padding: 5px 5px;
+				transition: 0.3s;
+				font-size: 14px;
+				color: #fff;
+			}
+			.logo{
+				height: auto;
+				width: 100px;
+				margin: 10px;
+			}
+			.slide{
+				height: 60%;
+				width: 60%;
+			}
+			.single{
+				height: 70%;
+				width: 70%;
+			}
+		}
+			@media only screen and (max-width: 300px) {
+				h1{
+					font-size: 13pt;
+					height: 40px;
+				}
+				h2{
+					font-size: 11pt;
+					height: 20px;
+				}
+				h3{
+					font-size: 12pt;
+					margin-left: 5px;
+					margin-right: 5px;
+				}
+				p,li {
+					font-size: 11pt;
+					margin-left: 5px;
+					margin-right: 5px;
+				}
+				table {
+					font-size: 11pt;
+				}
+				body{
+					font-size: 8pt;
+				}
+				footer{
+						height: 50px;
+
+				}
+				.tab button{
+					background-color: inherit;
+					border: none;
+					outline: none;
+					cursor: pointer;
+					padding: 3px 3px;
+					transition: 0.3s;
+					font-size: 12px;
+					color: #fff;
+				}
+				.logo{
+					height: auto;
+					width: 100px;
+					margin: 5px;
+				}
+				.slide{
+					height: 70%;
+					width: 70%;
+				}
+				.single{
+					height: 80%;
+					width: 80%;
+				}
+		}
+	</style>
+	</head>
+	<body>
+		<hr/>
+		<a href="honorsw.html"><img src="https://www.uvawise.edu/themes/uvawise/logo.svg" class="logo" alt="Home"></a>
+		<h1>Peake Honors Program</h1>
+	<!-- Tab buttons -->
+	<div class="tab">
+		<button class="tablinks" onclick="openTabs(event, 'Welcome')">Welcome <i class="fa fa-fw fa-home"></i></button>
+		<button class="tablinks" onclick="openTabs(event, 'Trips')">Trips <i class="fa fa-fw fa-plane"></i></button>
+		<button class="tablinks" onclick="openTabs(event, 'Classes')">Classes	<i class="fa fa-fw fa-edit"></i></button>
+		<button class="tablinks" onclick="openTabs(event, 'Research')">Research	<i class="fa fa-fw fa-flask"></i></button>
+		<button class="tablinks" onclick="openTabs(event, 'Events')">Social Events	<i class="fa fa-fw fa-users"></i></button>
+		<button class="tablinks" onclick="openTabs(event, 'HowToApply')">How To Apply	<i class="fa fa-fw fa-paper-plane"></i></button>
+	  <button class="tablinks" onclick="openTabs(event, 'Stories')">Stories	<i class="fa fa-fw fa-book"></i></button>
+	</div>
+	<!-- Tab content -->
+	<!-- Stories page -->
+	<div id="Stories" class="tabcontent">
+			<img src="https://lh3.googleusercontent.com/sNWs50Xqa21kHRu3GHolU_jB0jazFo0LhalkznrYYp1ogES1vHj-je0GRGnPwfF0SzKQ9WJckXnPd-IumLfsagURVbaOGWcsKO4dQaJjLsuJpG20B_6RVCrnjkgEVoY5rzan9_wLbw=w2400" class="single" alt="Honors Graduates">
+			  <h3>Stories</h3>
+					<p>
+						Through participating in the Honors Program, our graduates become lifelong learners with diverse interests. They pursue fulfilling careers in a number of fields, including computer science,
+						medicine, religion, teaching, theater, business, and law.  A majority of our alums go on to graduate and professional schools, including some of the most prestigious programs in the country.  Past students have enrolled at:
+					</p>
+					<table>
+						<tr>
+							<th>School:</th>
+							<th>Program:</th>
+						</tr>
+						<tr>
+							<td>Duke University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+							<td>Medicine</td>
+						</tr>
+					<tr>
+						<td>University of Chicago&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td>Immunology</td>
+					</tr>
+					<tr>
+						<td>Northwestern&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td>Arts Management</td>
+					</tr>
+					<tr>
+						<td>UNC-Chapel Hill&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td>Teaching English</td>
+					</tr>
+					<tr>
+						<td>University of Virginia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td>Biology</td>
+					</tr>
+					<tr>
+						<td>Emory University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td>Immunology</td>
+					</tr>
+					<tr>
+						<td>Louisiana State Univ.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td>History</td>
+					</tr>
+					<tr>
+						<td>Univ. of South Carolina&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td>Math</td>
+					</tr>
+			</table>
+			<p>
+				A number of other alums have pursued graduate degrees at highly-regarded schools closer to home, including Radford, ETSU, Virginia Tech, University of Kentucky, Mary Baldwin, and James Madison.
+				Moreover, many of these alums credit the Honors Program with both helping them get into graduate school and succeeding once they were there.  Testimonials from recent grads:
+			</p>
+			<ul>
+			  <li>“Extra research experiences to talk about in apps/interviews bolstered my transcript.” . . . “It helped me showcase the kind of critical inquiry expected of graduate students.”</li>
+			  <li>“The independent research and specialized courses outside of my major gave me the confidence to pursue a masters degree in a field that I had not studied before.</li>
+			  <li>“. . . the level of work required to remain in the Honors Program helped me prepare for the amount and level of work in my masters program and helped me maintain a positive outlook even when tasks seemed overwhelming.  After all, much had been required of me before.”</li>
+				<li>“Working around highly motivated individuals in the honors program was a good starter for a similar intimate environment and people in grad school.”</li>
+				<li>“The honors program . . . exposed [me] to a high work level and many different academic discussions and fields before graduate school.  This broadened the base of my knowledge and helped me take in the theories and knowledge I encountered in graduate school.”</li>
+				<li>“My research knowledge and multi-curricular experience helped me get a graduate teaching assistantship.”</li>
+				<li>“I was accepted into the program mid-year based on the specialized classes and independent research completed during my time at UVa-Wise and I was able to skip an introductory research course because of my final research paper.”</li>
+			</ul>
+	<br/><br/><br/>
+	</div>
+	<!-- Welcome Tab -->
+	<div id="Welcome" class="tabcontent">
+			  <h3>Welcome</h3>
+				<p>Welcome to the Peake Honors Program!  We are comprised of a diverse group of 35-40 students from all different majors.
+				Our goal is to provide academically-motivated students—like yourself!—with further opportunities for engagement and growth.
+				To that end, we offer interdisciplinary courses, independent research, and enriching out-of-class activities.
+				Perhaps most importantly, you get to explore these opportunities with a group of like-minded peers that you can interact with both socially and intellectually.
+				Being a member of the Honors Program will both enhance your time at UVA Wise and also position you to do great things after you graduate.
+				Please explore the above tabs to learn more.
+				</p>
+				<!-- Slideshow -->
+				<div class="slideshow-container">
+					<!-- Images from Google Photos host -->
+					<div class="mySlides">
+					<img src="https://lh3.googleusercontent.com/oEzExYKJ0vO9cgwcVNyXlVafe-b6mXrS5YKuyQnlCkfSdVk02NMQHm1iL5OBKziPFSLlBuc1J84s_G9tizc_P8IzXi5L3BB3XZDodBg5Vlrz5MxB3IaK29YoBbYWt1BFovemHCWlfw=w2400" class="slide" alt="Honors Dining">
+					</div>
+					<div class="mySlides">
+						<img src="https://lh3.googleusercontent.com/4E0SEtJP22Jj_PqH7J9UIXE8bmvd3oMoj-OngRCHphtdUh5Ha4_eCBEWFuCAAlFp14V8cIyhWoyM5SM_Adj915a9pbT0cziY5rGmbzbMd3pkQAkP72fU7rO_wD3SvByLo2tydh_U7g=w2400" class="slide" alt="Outdoor Excursions">
+					</div>
+					<div class="mySlides">
+						<img src="https://lh3.googleusercontent.com/qi-IcUXO4oga_Kmpl8Dmm5GQ8IKr0P-44cZClUYIyT9PMBVJXYPTcVJQ4na9peL4jcvQmcrkAgvrTmEQZgNqKW-ieHsTnj9uGkAT-YbTIqr-dTTyzfPz0v6R5psobxKnAkvU2HSJ8A=w2400" class="slide" alt="Fun at the Beach">
+					</div>
+					<div class="mySlides">
+						<img src="https://lh3.googleusercontent.com/LHmTi2ur1I_hkDlB-g0uEQ3ywiN3bC7qqvnlfpZR15fNqDej8fHiOOZ8Eaj-V3CBy0CU6NerMck86GBagU3cKFPSRwp5bha3E58rVVi-ZrW8ricuNaWSUSAs0D1fK9X-BMMjbjn8lw=w2400" class="slide" alt="Honors Mystery">
+					</div>
+					<div class="mySlides">
+						<img src="https://lh3.googleusercontent.com/J2Esexo7XKpbHuUXZQ2smdyjM8zOsGtNQLRg8Q_CJrdaMRuTUslGO3GwkukevwqGSkJMMVHuMxHSfGpB6aC5dBBsr6rXYoxlY_x4wOuLVQooAFJv2SFZ-ekmJF-NjKHdaz-OaLSaPQ=w2400" class="slide" alt="Kayaking">
+					</div>
+				</div><br/><br/><br/>
+	</div>
+	<!-- Trips page -->
+	<div id="Trips" class="tabcontent">
+			<img src="https://lh3.googleusercontent.com/uVJObpzd1zZldc4pac96Q_XGaS-4s9mrVxMg2oo1Snk2iiV14An8fOnp8Y3rnUT7iIFRyitzewVGJEU8bPN2TiItyHu7H3VINEiATJumQwDVkA3MZM4PFq-EJDStE5hXEM6hcqkD=w2400" class="single" alt="Visit with a Battleship">
+			  <h3>Trips</h3>
+					<p>Each year, the Program offers a number of off-campus excursions that encourage members to experience and engage with the wider world. In past semesters, we have taken day trips to local destinations like the:</p>
+							<ul>
+							 <li>Carter Fold</li>
+							 <li>Gray Fossil Site</li>
+							 <li>National Storytelling Festival</li>
+							 <li>Bristol Caverns</li>
+							 <li>Museum of Southwest Virginia</li>
+							</ul>
+							<p>In addition, we typically take one overnight trip per semester.  This allows us to range further afield, visit a larger city, and sample its cultural amenities (plays, concerts, historical sites, museums, ethnic food, etc.). Past destinations include:</p>
+							<ul>
+							 <li>Charleston, SC</li>
+							 <li>Asheville, NC</li>
+							 <li>Savannah, GA</li>
+							 <li>Williamsburg, VA</li>
+							 <li>Louisville, KY</li>
+							 <li>Atlanta, GA</li>
+							 <li>The Outer Banks, NC</li>
+							</ul>
+							<p>Moreover, all of these trips are free to program members!</p><br/><br/>
+	</div>
+	<!-- Events page -->
+	<div id="Events" class="tabcontent">
+			<img src="https://lh3.googleusercontent.com/SP1S-1O5WHlsKFiTkC93sgB8uiSWk-az2ShJQaPqP-WWHKVK-Mbwjw4GrmMDiuK6gpMdiDBNZuDl-IYijkIf5pJJ4FoRF1GavEnnHV2wdh2IbTIJY5JbVUWEZ8WNcwPuz8J2917b=w2400" class="single" alt="Social Gathering">
+			  <h3>Events</h3>
+					<p>
+						Social events help cultivate relationships and build a sense of community among program members.
+						Annual events include the fall Welcome Back Picnic at Camp Bethel and the spring Murder Mystery Dinner at the program director’s house (pictured above).
+						Other regular social events include:
+					</p>
+					<ul>
+					 <li>Tubing on the Clinch River</li>
+					 <li>Rollerskating</li>
+					 <li>Bowling</li>
+					 <li>Game nights</li>
+					 <li>Hiking</li>
+					 <li>Movies at the local Drive-In</li>
+					 <li>Paint-your-own-pottery</li>
+					 <li>Putt-putt</li>
+					 <li>Ghost walks</li>
+					 <li>Sledding</li>
+					 <li>Starbucks coffee socials</li>
+				 </ul><br/><br/><br/>
+	</div>
+	<!-- Research page -->
+	<div id="Research" class="tabcontent">
+			<img src="https://lh3.googleusercontent.com/JtzsNEq1Udhg25LVJ2CDZgSxYkZbF0bEEGH6GhG08Gznkw14ZZBxq_VPXOmkYrGxuUExDAzgVWXnbKiEQAafaTrhnRG7Ury91T18Us8CQSS_yfp55fzm3z_yfwAu3BlUw6mfycLt=w2400" class="single" alt="Research Experience">
+			  <h3>Research</h3>
+					<p>
+						Honors students also get to conduct independent research with faculty mentors.
+						Some students complete a Senior Capstone project.  Since it cultivates research skills and functions as something of a mini-thesis,
+						the Capstone is a great option for students who are considering graduate school.
+						Recent capstone topics include:
+					</p><br/>
+					<ul>
+					 <li>The role of women in contemporary terrorist organizations</li>
+					 <li>An oral history of Appalachian moonshining</li>
+					 <li>Heavy metal as political commentary</li>
+					 <li>The suitability of different metal complexes for delivering cancer treatment</li>
+					 <li>Covert rhetorics of independence in antebellum black spirituals</li>
+					 <li>Neurological responses to religious imagery</li>
+					 <li>Mitigating the effects of depression in freshmen college students</li>
+				 </ul><br/>
+				 <p>
+					 Other students choose two smaller alternative research projects.
+					 This option gives students training in conducting less traditional and more creative research projects.
+					 Past students have:
+				 </p>
+				 <ul>
+						<li>Kept a reflective journal during a study abroad experience in Dortmund, Germany</li>
+						<li>Examined issues of local water quality through the lens of environmental ethics</li>
+						<li>Written and illustrated a graphic novella</li>
+						<li>Gathered data on light pollution in Utah and Arizona national parks</li>
+						<li>Composed a series of lyrical essays that explore mental health disorders (e.g. bipolar, OCD, depression) as they manifest themselves in daily life.</li>
+					</ul><br/><br/><br/><br/>
+	</div>
+	<!-- Classes page -->
+	<div id="Classes" class="tabcontent">
+			<img src="https://lh3.googleusercontent.com/PGY6UBvOP9dKrXyPlgYwt-trMxf5eboXn9SxrzfytrLGWd_k-QMW1ILK59cIaTfkw9OcMczhqEEb45pgq4lO6CaBYjYad3HnWhn-B-JixOy45hd2dumUw5_8BW_J5xPWnTywMxA2=w2400" class="single" alt="Honors Class">
+				<h3>Classes</h3>
+					<p>
+						Each semester, program members are eligible to take special Honors seminars.
+						These classes are smaller and more discussion-oriented than typical college classes,
+						and they tend to revolve around stimulating interdisciplinary topics.  Recent offerings include:
+					</p><br/>
+					<ul>
+ 						<li>Religion and Science</li>
+ 						<li>The Politics of Game of Thrones</li>
+ 						<li>The Black Plague</li>
+ 						<li>Artificial Intelligence and Film</li>
+ 						<li>The Commercial Future of Space Exploration</li>
+ 						<li>Magic: Practices of Perception and Deception</li>
+						<li>Hamlet and Its Influence</li>
+						<li>Love, Sex, and Friendship</li>
+ 					</ul><br/><br/><br/><br/>
+	</div>
+	<!-- How to Apply page -->
+	<div id="HowToApply" class="tabcontent">
+			<img src="https://lh3.googleusercontent.com/Lb0sm6wF7t88LW1GGpZdYBS45GYO1C9QGLTlMEc2gOnpIMfzZpVTA_gCuqQCqypCRQPF_BQSdDYlzdom6MuF3R_Y8HpX4hYKxHuZUdgiefXe96ijIFeRmZFaS32oSiGuNCvyLRri=w2400" class="single" alt="Join">
+			  <h3>How To Apply</h3>
+					<p>
+							<strong>Academic qualifications:</strong> Incoming freshmen are required to have a 3.5 high school GPA and a combined SAT score of around 1200.  Transfers and current UVA Wise students need a 3.5 college GPA.<br/><br/>
+							<strong>Application process:</strong>  All applicants must submit the application form and the accompanying two-page essay.<br/>In addition, transfers and current UVA Wise students should provide a letter of recommendation from a faculty member (either at UVA Wise or their current school) who is familiar with their academic work.<br/><br/>
+							<strong>Timelines:</strong> Letters to qualifying high school seniors generally go out in early spring.  The late spring application deadline is specified in the letter. Transfers and current students can apply at any time in order to join the following semester.<br/><br/>
+							Here is the <a href="https://www.uvawise.edu/sites/default/files/attachments/pages/2020-07/Peake-Honors-Program-Freshman-Application.pdf">Freshmen Application</a> and the <a href="https://www.uvawise.edu/sites/default/files/attachments/pages/2020-07/Peake-Honors-Program-Upperclassmen-Application.pdf">Upper Classmen Application.</a><br/><br/>
+							Here is the link to the <a href="https://www.uvawise.edu/academics/honors-program">Honors UVA-Wise.edu Page</a> and <a href="https://www.uvawise.edu/directory/john-mark-adrian">Professor Adrian's Page</a><br/><br/>
+							To ask questions about or express interest in joining the Peake Honors Program, please email me directly at <a href="mailto:jma6x@uvawise.edu">jma6x@uvawise.edu</a> or call me at 276-376-4588.<br/><br/>
+					</p>
+	</div>
+	<script>
+	//This sets the welcome page as default when the page is opened
+	window.onload = document.getElementsByClassName('tablinks')[0].click();
+	// Opens the tabs and display the content
+	function openTabs(evt, TabName) {
+	  var i, tabcontent, tablinks;
+	  tabcontent = document.getElementsByClassName("tabcontent");
+	  for (i = 0; i < tabcontent.length; i++) {
+	    tabcontent[i].style.display = "none";
+	  }
+	  tablinks = document.getElementsByClassName("tablinks");
+	  for (i = 0; i < tablinks.length; i++) {
+	    tablinks[i].className = tablinks[i].className.replace(" active", "");
+	  }
+	  document.getElementById(TabName).style.display = "block";
+	  evt.currentTarget.className += " active";
+	}
+		var slideIndex = 0;
+		showSlides();
+	// Displays the images for the slideshow
+		function showSlides() {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			slideIndex++;
+			if (slideIndex > slides.length) {slideIndex = 1}
+			slides[slideIndex-1].style.display = "block";
+			setTimeout(showSlides, 5000); // Change image every 5 seconds
+		}
+	</script>
+		<footer>
+			<h4>For questions and additonal information please email Dr. John Adrian at <a href="mailto:jma6x@uvawise.edu">jma6x@uvawise.edu</a> or call at 276-376-4588.</h4><br/><br/><br/><br/>
+		</footer>
+	</body>
+</html>
